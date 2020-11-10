@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"github.com/fuku2014/terraform-provider-takenokonosato/takenokonosato"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
 
 func main() {
-	fmt.Println("vim-go")
-}
-
-func Foo() string {
-	return os.Getenv("FOO")
+	plugin.Serve(&plugin.ServeOpts{
+		ProviderFunc: takenokonosato.Provider,
+	})
 }
