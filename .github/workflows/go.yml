@@ -40,8 +40,8 @@ jobs:
       id: lint
 
     - name: Check docs
-      run: make doccheck
-      id: doccheck
+      run: make docscheck
+      id: docscheck
     
     - name: Run unit tests
       run: make test
